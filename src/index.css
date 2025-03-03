@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+    --color-zard: #F6C916;
+
+    --breakpoint-sm: 40rem;
+    --breakpoint-md: 48rem;
+    --breakpoint-lg: 64rem;
+    --breakpoint-xl: 80rem;
+    --breakpoint-2xl: 1440px;
+}
+
+body {
+    background-color: #000;
+}
+
+.glow {
+    position: absolute;
+    box-shadow: 0 0 1000px 120px #9bff8286;
+    z-index: 50;
+}
+
+.buttonHover {
+    @apply hover:scale-105 transition-all active:scale-95
+}
+
+.borderGradient {
+    background: radial-gradient(circle at 100% 100%, #000000 0, #000000 28px, transparent 28px) 0% 0%/30px 30px no-repeat,
+        radial-gradient(circle at 0 100%, #000 0, #000000 28px, transparent 28px) 100% 0%/30px 30px no-repeat,
+        radial-gradient(circle at 100% 0, #000000 0, #000000 28px, transparent 28px) 0% 100%/30px 30px no-repeat,
+        radial-gradient(circle at 0 0, #000000 0, #000000 28px, transparent 28px) 100% 100%/30px 30px no-repeat,
+        linear-gradient(#000000, #000000) 50% 50%/calc(100% - 4px) calc(100% - 60px) no-repeat,
+        linear-gradient(#000000, #000000) 50% 50%/calc(100% - 60px) calc(100% - 4px) no-repeat,
+        linear-gradient(90deg, rgba(11, 121, 153, 1) 0%, rgba(26, 208, 97, 1) 100%);
+}
+
+.boxBorderGradient {
+    box-shadow: 0 0 22px rgba(26, 208, 97, .2);
+}
+
+.selected {
+    background: rgb(11, 121, 153);
+    background: -moz-linear-gradient(95deg, rgba(11, 121, 153, 1) 0%, rgba(26, 208, 97, 1) 100%);
+    background: -webkit-linear-gradient(95deg, rgba(11, 121, 153, 1) 0%, rgba(26, 208, 97, 1) 100%);
+    background: linear-gradient(95deg, rgba(11, 121, 153, 1) 0%, rgba(26, 208, 97, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.link:hover {
+    background: rgb(11, 121, 153);
+    background: -moz-linear-gradient(95deg, rgba(11, 121, 153, 1) 0%, rgba(26, 208, 97, 1) 100%);
+    background: -webkit-linear-gradient(95deg, rgba(11, 121, 153, 1) 0%, rgba(26, 208, 97, 1) 100%);
+    background: linear-gradient(95deg, rgba(11, 121, 153, 1) 0%, rgba(26, 208, 97, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.buttonGradient {
+    background: rgb(0, 255, 153);
+    background: -moz-linear-gradient(180deg, rgba(0, 255, 153, 1) 0%, rgba(0, 119, 204, 1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(0, 255, 153, 1) 0%, rgba(0, 119, 204, 1) 100%);
+    background: linear-gradient(180deg, rgba(0, 255, 153, 1) 0%, rgba(0, 119, 204, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00ff99", endColorstr="#0077cc", GradientType=1);
+}
