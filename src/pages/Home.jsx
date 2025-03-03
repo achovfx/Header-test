@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
 import Navbar from "./../components/Navbar/Navbar.jsx";
 
+import backgroundImage from "/images/bg.svg";
+import dollerImg from "/images/doller.svg";
+
 const containerVariants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { staggerChildren: 0.3 } },
@@ -48,7 +51,7 @@ export default function Home() {
                 </motion.div>
                 <motion.div className="flex flex-col justify-around items-center boxBorderGradient w-[360px] h-[190px] rounded-4xl bg-white/10 backdrop-blur-lg outline-1 outline-[#1ad061]" variants={slideRight}>
                     <div className="flex justify-center items-center gap-2">
-                        <div className="max-lg:w-12"><img src="images/doller.svg" alt="img" /></div>
+                        <div className="max-lg:w-12"><img src={dollerImg} alt="img" /></div>
                         <div className="flex flex-col justify-center gap-1 item text-sm">
                             <p>Level Up Your Crypto Game with CryptoZen!</p>
                             <p className="text-[16px] text-yellow-300">$10M+ in Profits Generated</p>
@@ -60,7 +63,7 @@ export default function Home() {
                 </motion.div>
             </motion.div>
             <div>
-                <img className="absolute max-lg:scale-150 max-sm:scale-250 max-sm:-bottom-30 -bottom-10 max-sm:-left-60 max-lg:-left-20 left-0 w-screen h-screen" src="/images/bg.svg" alt="" />
+                <img className="absolute max-lg:scale-150 max-sm:scale-250 max-sm:-bottom-30 -bottom-10 max-sm:-left-60 max-lg:-left-20 left-0 w-screen h-screen" src={backgroundImage} alt="background" />
             </div>
         </motion.div>
     );

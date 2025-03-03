@@ -3,6 +3,9 @@ import { motion } from "framer-motion";
 import { IoMenu as MenuSvg } from "react-icons/io5";
 import { FaUser as UserSvg } from "react-icons/fa";
 
+import logoImg from "/images/logo.svg";
+import mobileLogoImg from "/images/logoMobile.svg";
+
 export default function Navbar() {
     const slideTop = {
         hidden: { y: -100, opacity: 0 },
@@ -12,7 +15,7 @@ export default function Navbar() {
         <motion.nav variants={slideTop} className="max-w-[1440px] w-full flex justify-between items-center z-50">
             <div className="max-md:hidden text-[18px] max-w-[1440px] w-full flex justify-between items-center">
                 <div className="logo">
-                    <a href="#"><img src="images/logo.svg" alt="" /></a>
+                    <a href="#"><img src={logoImg} alt="" /></a>
                 </div>
                 <div className="flex gap-10">
                     <a className="buttonHover link selected" href="#">Home</a>
@@ -28,7 +31,7 @@ export default function Navbar() {
                     <UserSvg />
                 </div>
                 <div className="logo">
-                    <img src="images/logoMobile.svg" alt="logo" />
+                    <img src={mobileLogoImg} alt="logo" />
                 </div>
                 <div className="menu">
                     <MenuSvg size="24px" />
